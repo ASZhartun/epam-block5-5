@@ -1,7 +1,9 @@
 package flowerComposition.components;
 
 import flowerComposition.components.interfaces.Item;
-
+/**
+ * Class Flower is describing flower for bouquet and implements Item interface.
+ */
 public class Flower implements Item {
     private FlowerType flowerIs;
 
@@ -38,7 +40,12 @@ public class Flower implements Item {
                 "flowerIs=" + flowerIs +
                 '}';
     }
-
+    /**
+     * Get item of wrap from WrapType enum. Item is basing on user's input.
+     * @param name texture of wrap.
+     * @param color color of wrap.
+     * @return Wrap object is based on user's input.
+     */
     public static FlowerType getOriginItem(String name, String color) {
         for (int i = 0; i < Wrap.WrapType.values().length; i++) {
             String nameTemp = Flower.FlowerType.values()[i].getName();
@@ -49,7 +56,9 @@ public class Flower implements Item {
         }
         return null;
     }
-
+    /**
+     * Set of all flowers that shop has.
+     */
     public enum FlowerType {
         ROSE_RED("rose","red", 6.99),
         ROSE_PINK("rose","pink", 6.99),

@@ -6,6 +6,9 @@ import flowerComposition.components.Wrap;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * Class Bouquet is describing bouquet of user. It has storage for all flowers and wraps that user chosen.
+ */
 public class Bouquet {
     private ArrayList<Flower> flowers;
     private ArrayList<Wrap> wrapper;

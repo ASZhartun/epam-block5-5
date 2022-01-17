@@ -2,6 +2,9 @@ package flowerComposition.components;
 
 import flowerComposition.components.interfaces.Item;
 
+/**
+ * Class Wrap is describing wrapper for bouquet and implements Item interface.
+ */
 public class Wrap implements Item {
     private WrapType wrapper;
 
@@ -30,6 +33,12 @@ public class Wrap implements Item {
         return this;
     }
 
+    /**
+     * Get item of wrap from WrapType enum. Item is basing on user's input.
+     * @param name texture of wrap.
+     * @param color color of wrap.
+     * @return Wrap object is based on user's input.
+     */
     public static WrapType getOriginItem(String name, String color) {
         for (int i = 0; i < WrapType.values().length; i++) {
             String textureTemp = WrapType.values()[i].getTexture().getPaperTypeName();
@@ -48,6 +57,9 @@ public class Wrap implements Item {
                 '}';
     }
 
+    /**
+     * Set of all wraps that shop has.
+     */
     public enum WrapType {
         MATTE_PINK(PaperType.MATTE, PaperColor.PINK, 0.79),
         MATTE_BLUE(PaperType.MATTE, PaperColor.BLUE, 0.79),

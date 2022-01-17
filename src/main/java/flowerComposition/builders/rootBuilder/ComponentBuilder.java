@@ -5,6 +5,9 @@ import flowerComposition.components.interfaces.Item;
 
 import java.util.Locale;
 
+/**
+ * Abstract builder that is describing common method and default method and fields for user's input.
+ */
 public abstract class ComponentBuilder {
     protected String inputName;
     protected String inputColor;

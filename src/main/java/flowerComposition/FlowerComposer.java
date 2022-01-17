@@ -4,16 +4,24 @@ import flowerComposition.builders.FlowerBuilder;
 import flowerComposition.builders.WrapBuilder;
 import flowerComposition.components.Flower;
 import flowerComposition.components.Wrap;
-import flowerComposition.components.interfaces.Item;
 
 import java.util.Scanner;
 
+/**
+ * Create, return and give info about bouquet.
+ */
 public class FlowerComposer {
     public static Scanner scanner;
     private final FlowerBuilder flowerBuilder;
     private final WrapBuilder wrapBuilder;
     private final Bouquet bouquet;
 
+    /**
+     * Init scanner for input options of future bouquet.
+     * Init factory for creating Flower and Wrap.
+     * Init bouquet that is storing chosen flowers and wrappers.
+     * Print out info about accessible flowers and wrappers for bouquet.
+     */
     public FlowerComposer() {
         scanner = new Scanner(System.in);
         flowerBuilder = new FlowerBuilder();
@@ -45,5 +53,9 @@ public class FlowerComposer {
                 Wrap.WrapType.values()) {
             System.out.println(item);
         }
+    }
+
+    public Bouquet getBouquet() {
+        return bouquet;
     }
 }
